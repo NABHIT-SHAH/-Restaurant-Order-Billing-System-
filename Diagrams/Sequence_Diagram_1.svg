@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1150" height="920" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <filter id="sqShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="2" dy="3" stdDeviation="3" flood-color="#000000" flood-opacity="0.10"/>
+    </filter>
+    <marker id="sArrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#1e293b"/>
+    </marker>
+    <marker id="retArrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect width="1150" height="920" fill="#f8fafc" rx="12"/>
+
+  <!-- Title -->
+  <rect x="25" y="15" width="1100" height="55" rx="8" fill="#1e293b" filter="url(#sqShadow)"/>
+  <text x="575" y="40" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">SEQUENCE DIAGRAM 1 — MAIN TRANSACTION: PLACE ORDER &amp; BILLING</text>
+  <text x="575" y="58" font-size="12" fill="#94a3b8" text-anchor="middle">Step-by-step interaction between Actors and Objects during ordering</text>
+
+  <!-- Lifeline Boxes -->
+  <!-- User: x=100 -->
+  <rect x="50" y="85" width="100" height="35" rx="6" fill="#3b82f6" filter="url(#sqShadow)"/>
+  <text x="100" y="107" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">🧑 User</text>
+  <line x1="100" y1="120" x2="100" y2="880" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="4,4"/>
+
+  <!-- Restaurant: x=280 -->
+  <rect x="220" y="85" width="120" height="35" rx="6" fill="#e11d48" filter="url(#sqShadow)"/>
+  <text x="280" y="107" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">:Restaurant</text>
+  <line x1="280" y1="120" x2="280" y2="880" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="4,4"/>
+
+  <!-- Customer: x=480 -->
+  <rect x="420" y="85" width="120" height="35" rx="6" fill="#d97706" filter="url(#sqShadow)"/>
+  <text x="480" y="107" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">:Customer</text>
+  <line x1="480" y1="120" x2="480" y2="880" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="4,4"/>
+
+  <!-- MenuItem: x=680 -->
+  <rect x="620" y="85" width="120" height="35" rx="6" fill="#16a34a" filter="url(#sqShadow)"/>
+  <text x="680" y="107" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">:MenuItem</text>
+  <line x1="680" y1="120" x2="680" y2="880" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="4,4"/>
+
+  <!-- Order: x=880 -->
+  <rect x="820" y="85" width="120" height="35" rx="6" fill="#7c3aed" filter="url(#sqShadow)"/>
+  <text x="880" y="107" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">:Order</text>
+  <line x1="880" y1="120" x2="880" y2="880" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="4,4"/>
+
+  <!-- Bill: x=1040 -->
+  <rect x="990" y="85" width="100" height="35" rx="6" fill="#0284c7" filter="url(#sqShadow)"/>
+  <text x="1040" y="107" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">:Bill</text>
+  <line x1="1040" y1="120" x2="1040" y2="880" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="4,4"/>
+
+  <!-- Activation bars -->
+  <rect x="274" y="145" width="12" height="715" fill="#fecdd3" stroke="#e11d48"/>
+  <rect x="874" y="325" width="12" height="235" fill="#ddd6fe" stroke="#7c3aed"/>
+  <rect x="1034" y="605" width="12" height="195" fill="#bae6fd" stroke="#0284c7"/>
+
+  <!-- Messages -->
+  <!-- 1. placeOrder() -->
+  <line x1="100" y1="150" x2="274" y2="150" stroke="#1e293b" stroke-width="2" marker-end="url(#sArrow)"/>
+  <text x="187" y="143" font-size="12" font-weight="600" fill="#1e293b">1. placeOrder()</text>
+
+  <!-- 2. Prompt customer -->
+  <line x1="274" y1="180" x2="100" y2="180" stroke="#64748b" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#retArrow)"/>
+  <text x="187" y="174" font-size="11" fill="#64748b">2. Select Customer</text>
+
+  <!-- 3. Provide Customer ID -->
+  <line x1="100" y1="205" x2="274" y2="205" stroke="#1e293b" stroke-width="2" marker-end="url(#sArrow)"/>
+  <text x="187" y="198" font-size="12" fill="#1e293b">3. Enter customerId (1)</text>
+
+  <!-- 4. Lookup Customer -->
+  <line x1="286" y1="225" x2="480" y2="225" stroke="#1e293b" stroke-width="2" marker-end="url(#sArrow)"/>
+  <text x="383" y="218" font-size="12" fill="#1e293b">4. findCustomer(1)</text>
+  <line x1="480" y1="245" x2="286" y2="245" stroke="#64748b" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#retArrow)"/>
+  <text x="383" y="240" font-size="11" fill="#64748b">5. Return Customer Info</text>
+
+  <!-- 6. Display Menu -->
+  <line x1="286" y1="270" x2="680" y2="270" stroke="#1e293b" stroke-width="2" marker-end="url(#sArrow)"/>
+  <text x="483" y="263" font-size="12" fill="#1e293b">6. displayMenuItems() [polymorphic]</text>
+  <line x1="680" y1="295" x2="100" y2="295" stroke="#64748b" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#retArrow)"/>
+  <text x="390" y="290" font-size="11" fill="#64748b">7. Render Menu Catalog</text>
+
+  <!-- 8. Instantiate Order -->
+  <line x1="286" y1="330" x2="874" y2="330" stroke="#1e293b" stroke-width="2" marker-end="url(#sArrow)"/>
+  <text x="580" y="323" font-size="12" font-weight="600" fill="#7c3aed">8. new Order(orderId, customerId)</text>
+  <rect x="895" y="335" width="220" height="24" rx="4" fill="#f5f3ff" stroke="#c4b5fd"/>
+  <text x="1005" y="351" font-size="10" fill="#5b21b6" text-anchor="middle">Dynamic: new int[capacity] arrays</text>
+
+  <!-- Loop: Add Items -->
+  <rect x="70" y="375" width="860" height="150" rx="6" fill="#f8fafc" stroke="#94a3b8" stroke-dasharray="6,3"/>
+  <rect x="75" y="380" width="120" height="20" rx="3" fill="#e2e8f0"/>
+  <text x="135" y="394" font-size="11" font-weight="bold" fill="#334155" text-anchor="middle">LOOP: Add Items</text>
+
+  <line x1="100" y1="415" x2="274" y2="415" stroke="#1e293b" stroke-width="2" marker-end="url(#sArrow)"/>
+  <text x="187" y="408" font-size="12" fill="#1e293b">9. enter itemId &amp; quantity</text>
+
+  <line x1="286" y1="440" x2="680" y2="440" stroke="#1e293b" stroke-width="2" marker-end="url(#sArrow)"/>
+  <text x="483" y="433" font-size="12" fill="#1e293b">10. validate item exists &amp; isAvailable()</text>
+
+  <line x1="286" y1="475" x2="874" y2="475" stroke="#1e293b" stroke-width="2" marker-end="url(#sArrow)"/>
+  <text x="580" y="468" font-size="12" font-weight="600" fill="#7c3aed">11. addItem(itemId, qty)</text>
+
+  <line x1="274" y1="505" x2="100" y2="505" stroke="#64748b" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#retArrow)"/>
+  <text x="187" y="500" font-size="11" fill="#64748b">12. item added, prompt more (y/n)</text>
+
+  <!-- 13. Prompt Tax & Discount -->
+  <line x1="274" y1="545" x2="100" y2="545" stroke="#64748b" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#retArrow)"/>
+  <text x="187" y="540" font-size="11" fill="#64748b">13. Enter Tax Rate (18%) &amp; Discount (50)</text>
+
+  <!-- 14. Supply Tax & Discount -->
+  <line x1="100" y1="570" x2="274" y2="570" stroke="#1e293b" stroke-width="2" marker-end="url(#sArrow)"/>
+  <text x="187" y="563" font-size="12" fill="#1e293b">14. Return Tax &amp; Discount</text>
+
+  <!-- 15. Create Bill -->
+  <line x1="286" y1="610" x2="1034" y2="610" stroke="#1e293b" stroke-width="2" marker-end="url(#sArrow)"/>
+  <text x="660" y="603" font-size="12" font-weight="600" fill="#0284c7">15. new Bill(billId, orderId, custId, subtotal, 18.0, discount)</text>
+
+  <!-- 16. calculateTotal() -->
+  <path d="M 1046 625 C 1075 625, 1075 645, 1046 645" stroke="#0284c7" stroke-width="2" marker-end="url(#sArrow)"/>
+  <text x="1080" y="638" font-size="11" fill="#0284c7">16. calculateTotal()</text>
+
+  <!-- 17. display() -->
+  <line x1="1034" y1="670" x2="100" y2="670" stroke="#64748b" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#retArrow)"/>
+  <text x="567" y="663" font-size="11" fill="#64748b">17. Display Formatted Bill Receipt to User</text>
+
+  <!-- 18. Payment -->
+  <line x1="100" y1="710" x2="274" y2="710" stroke="#1e293b" stroke-width="2" marker-end="url(#sArrow)"/>
+  <text x="187" y="703" font-size="12" fill="#1e293b">18. Select Payment Method (UPI)</text>
+
+  <!-- 19. finalize bill & order -->
+  <line x1="286" y1="735" x2="1034" y2="735" stroke="#1e293b" stroke-width="2" marker-end="url(#sArrow)"/>
+  <text x="660" y="728" font-size="12" fill="#0284c7">19. setPaymentMethod("UPI") &amp; setPaymentStatus("Paid")</text>
+
+  <line x1="286" y1="765" x2="874" y2="765" stroke="#1e293b" stroke-width="2" marker-end="url(#sArrow)"/>
+  <text x="580" y="758" font-size="12" fill="#7c3aed">20. setStatus("Completed")</text>
+
+  <!-- 21. Complete -->
+  <line x1="274" y1="810" x2="100" y2="810" stroke="#16a34a" stroke-width="2" stroke-dasharray="4,3" marker-end="url(#retArrow)"/>
+  <text x="187" y="803" font-size="12" font-weight="bold" fill="#16a34a">21. Order &amp; Billing Completed Successfully!</text>
+</svg>

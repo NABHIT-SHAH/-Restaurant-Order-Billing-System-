@@ -1,0 +1,110 @@
+============================================
+   RESTAURANT ORDER & BILLING SYSTEM
+   Enrollment No: IU2541230417
+   Project Code : CPP07
+============================================
+Successfully loaded 10 menu items from Data/menu_items.txt
+Successfully loaded 4 customers from Data/customers.txt
+Successfully loaded 5 orders from Data/orders.txt
+Successfully loaded 4 bills from Data/bills.txt
+
+Data loaded: 10 menu items, 4 customers, 5 orders, 4 bills.
+
+========================================
+  RESTAURANT ORDER & BILLING SYSTEM
+  Enrollment: IU2541230417 | CPP07
+========================================
+1. Add Record
+2. Display Records
+3. Search Record
+4. Update Record
+5. Delete Record
+6. Place Order (Main Transaction)
+7. Generate Report
+8. Save/Load Data
+9. Exit
+========================================
+Enter choice: 
+--- DISPLAY RECORDS ---
+1. Menu Items
+2. Customers
+3. Orders
+4. Bills
+5. Back
+Enter choice: 
+============================== MENU ITEMS ==============================
+1     Paneer Tikka             Rs.240.00    Starters       North IndianVeg       Yes
+------------------------------------------------------------------------
+2     Butter Chicken           Rs.380.00    Main Course    North IndianNon-Veg   Yes
+------------------------------------------------------------------------
+3     Veg Hakka Noodles        Rs.210.00    Main Course    Chinese     Veg       Yes
+------------------------------------------------------------------------
+4     Chicken Biryani          Rs.320.00    Main Course    Hyderabadi  Non-Veg   Yes
+------------------------------------------------------------------------
+5     Gulab Jamun (2 pcs)      Rs.90.00     Desserts       Indian SweetsVeg       Yes
+------------------------------------------------------------------------
+6     Masala Chai              Rs.40.00     Beverages      Regular   Hot     Yes
+------------------------------------------------------------------------
+7     Cold Coffee with Ice CreamRs.120.00    Beverages      Large     Cold    Yes
+------------------------------------------------------------------------
+8     Fresh Lime Soda          Rs.70.00     Beverages      Medium    Cold    Yes
+------------------------------------------------------------------------
+9     Mango Lassi              Rs.90.00     Beverages      Large     Cold    Yes
+------------------------------------------------------------------------
+10    Margherita Pizza         Rs.280.00    Main Course    Italian     Veg       Yes
+------------------------------------------------------------------------
+
+========================================
+  RESTAURANT ORDER & BILLING SYSTEM
+  Enrollment: IU2541230417 | CPP07
+========================================
+1. Add Record
+2. Display Records
+3. Search Record
+4. Update Record
+5. Delete Record
+6. Place Order (Main Transaction)
+7. Generate Report
+8. Save/Load Data
+9. Exit
+========================================
+Enter choice: 
+--- DISPLAY RECORDS ---
+1. Menu Items
+2. Customers
+3. Orders
+4. Bills
+5. Back
+Enter choice: 
+================================ CUSTOMERS ================================
+1     Aarav Patel              9825012345     B-402 Shivalik Residency, Ahmedabad
+------------------------------------------------------------------------
+2     Pooja Sharma             9876543210     12 Royal Palms, Andheri East, Mumbai
+------------------------------------------------------------------------
+3     Rohan Verma              9123456789     54 Brigade Road, Bangalore
+------------------------------------------------------------------------
+4     Sneha Joshi              9988776655     88 Civil Lines, Jaipur
+------------------------------------------------------------------------
+
+========================================
+  RESTAURANT ORDER & BILLING SYSTEM
+  Enrollment: IU2541230417 | CPP07
+========================================
+1. Add Record
+2. Display Records
+3. Search Record
+4. Update Record
+5. Delete Record
+6. Place Order (Main Transaction)
+7. Generate Report
+8. Save/Load Data
+9. Exit
+========================================
+Enter choice: Successfully saved 10 menu items to Data/menu_items.txt
+Successfully saved 4 customers to Data/customers.txt
+Successfully saved 5 orders to Data/orders.txt
+Successfully saved 4 bills to Data/bills.txt
+
+All data saved successfully!
+
+Data saved. Thank you for using the system!

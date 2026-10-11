@@ -1,0 +1,11 @@
+FOOD|1|Paneer Tikka|240.000000|Starters|1|North Indian|1
+FOOD|2|Butter Chicken|380.000000|Main Course|1|North Indian|0
+FOOD|3|Veg Hakka Noodles|210.000000|Main Course|1|Chinese|1
+FOOD|4|Chicken Biryani|350.000000|Main Course|1|Hyderabadi|0
+FOOD|5|Gulab Jamun (2 pcs)|90.000000|Desserts|1|Indian Sweets|1
+BEVERAGE|6|Masala Chai|40.000000|Beverages|1|Regular|1
+BEVERAGE|7|Cold Coffee with Ice Cream|120.000000|Beverages|1|Large|0
+BEVERAGE|8|Fresh Lime Soda|70.000000|Beverages|1|Medium|0
+BEVERAGE|9|Mango Lassi|90.000000|Beverages|1|Large|0
+FOOD|10|Margherita Pizza|280.000000|Main Course|1|Italian|1
+FOOD|11|Paneer Butter Masala|260.000000|Main Course|1|North Indian|1

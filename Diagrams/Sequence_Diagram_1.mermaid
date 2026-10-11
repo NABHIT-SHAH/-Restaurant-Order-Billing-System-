@@ -1,0 +1,67 @@
+sequenceDiagram
+    autonumber
+    actor User as User / Cashier
+    participant Main as main()
+    participant Rest as r: Restaurant
+    participant Cust as c: Customer
+    participant Menu as m: MenuItem
+    participant Ord as o: Order
+    participant BillObj as b: Bill
+
+    User->>Main: Launch Program
+    Main->>Rest: run()
+    Rest-->>User: Display Main Menu
+
+    User->>Rest: Select Option 6 (Place Order)
+    activate Rest
+
+    Rest-->>User: Prompt Customer Selection (1: Existing, 2: New)
+    User->>Rest: Select Customer ID (e.g., 1)
+    Rest->>Rest: findCustomerIndex(1)
+    Rest-->>User: Display Customer Details
+
+    Rest->>Menu: displayMenuItems()
+    activate Menu
+    Menu-->>User: Polymorphic Display (FoodItem / BeverageItem)
+    deactivate Menu
+
+    Rest->>Ord: Order(orderId, customerId)
+    activate Ord
+    Note over Ord: Dynamic allocation of itemIds and quantities arrays
+    Ord-->>Rest: Order Instance Created
+
+    loop Add Menu Items
+        Rest-->>User: Prompt Item ID & Quantity
+        User->>Rest: Enter itemId (1), qty (2)
+        Rest->>Rest: findMenuItemIndex(1)
+        Rest->>Menu: isAvailable()
+        Menu-->>Rest: true
+        Rest->>Ord: addItem(1, 2)
+        Note over Ord: Dynamic array resize if capacity reached
+        Rest-->>User: Item added. Add more? (y/n)
+        User->>Rest: n
+    end
+
+    Rest->>Rest: Compute Subtotal from Order Items
+    Rest-->>User: Prompt Tax Rate (18%) & Discount (50)
+    User->>Rest: Enter Tax & Discount
+
+    Rest->>BillObj: Bill(billId, orderId, customerId, subtotal, 18.0, 50.0)
+    activate BillObj
+    BillObj->>BillObj: calculateTotal()
+    BillObj-->>Rest: Bill Instance Created
+
+    Rest->>BillObj: display()
+    BillObj-->>User: Render Formatted Receipt
+
+    Rest-->>User: Select Payment Method (1: Cash, 2: Card, 3: UPI)
+    User->>Rest: Select UPI
+    Rest->>BillObj: setPaymentMethod("UPI")
+    Rest->>BillObj: setPaymentStatus("Paid")
+    Rest->>Ord: setStatus("Completed")
+
+    Note over Rest: Store order and bill into dynamic arrays (resizing if needed)
+    Rest-->>User: Order & Bill Successfully Finalized!
+    deactivate BillObj
+    deactivate Ord
+    deactivate Rest
