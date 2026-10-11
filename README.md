@@ -89,11 +89,11 @@ g++ -std=c++17 -Wall -Wextra -o Executable/Project Source/*.cpp
 .
 ├── Source/                           # C++17 modular headers and implementations
 ├── Data/                             # Persisted pipe-delimited text files
-├── Diagrams/                         # UML diagrams (SVG vector & Mermaid code)
-│   ├── UseCase_Diagram.svg
-│   ├── Class_Diagram.svg
-│   ├── Sequence_Diagram_1.svg        # Main Transaction: Place Order
-│   └── Sequence_Diagram_2.svg        # Data Persistence Lifecycle
+├── Diagrams/                         # UML diagrams (Vector SVG)
+│   ├── UseCase.svg
+│   ├── ClassDiagram.svg
+│   ├── Sequence1.svg                 # Main Transaction: Place Order
+│   └── Sequence2.svg                 # Data Persistence Lifecycle
 ├── Executable/
 │   └── Project                       # Compiled executable
 ├── Screenshots/                      # Terminal run evidence (.svg & .txt)
