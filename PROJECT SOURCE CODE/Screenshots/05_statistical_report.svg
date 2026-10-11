@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="960" height="876" xmlns="http://www.w3.org/2000/svg" font-family="'SF Mono', Menlo, Monaco, 'Courier New', monospace" font-size="12">
+  <defs>
+    <filter id="winShadow" x="-3%" y="-3%" width="106%" height="106%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- Terminal Window Frame -->
+  <rect x="10" y="10" width="940" height="856" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#winShadow)"/>
+
+  <!-- Titlebar -->
+  <rect x="10" y="10" width="940" height="42" rx="10" fill="#1e293b"/>
+  <rect x="10" y="40" width="940" height="12" fill="#1e293b"/>
+  <line x1="10" y1="52" x2="950" y2="52" stroke="#334155" stroke-width="1"/>
+
+  <!-- Traffic lights -->
+  <circle cx="32" cy="31" r="6" fill="#ef4444"/>
+  <circle cx="52" cy="31" r="6" fill="#f59e0b"/>
+  <circle cx="72" cy="31" r="6" fill="#10b981"/>
+
+  <!-- Window Title -->
+  <text x="480" y="36" fill="#94a3b8" font-size="12" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="600" text-anchor="middle">terminal — Management &amp; Statistical Sales Report</text>
+
+  <!-- Subtitle Bar -->
+  <rect x="20" y="60" width="920" height="24" rx="4" fill="#1e293b"/>
+  <text x="30" y="76" fill="#38bdf8" font-size="11" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="500">▶ Real-time aggregation of total orders, revenue, tax collected, discounts given, and top 3 popular items.</text>
+
+  <!-- Content -->
+  <g transform="translate(10, 20)">
+    <text x="25" y="90" fill="#60a5fa" font-weight="bold">============================================</text>
+    <text x="25" y="108" fill="#60a5fa" font-weight="bold">   RESTAURANT ORDER &amp; BILLING SYSTEM</text>
+    <text x="25" y="126" fill="#e2e8f0" font-weight="normal">   Enrollment No: IU2541230417</text>
+    <text x="25" y="144" fill="#e2e8f0" font-weight="normal">   Project Code : CPP07</text>
+    <text x="25" y="162" fill="#60a5fa" font-weight="bold">============================================</text>
+    <text x="25" y="180" fill="#4ade80" font-weight="bold">Successfully loaded 11 menu items from Data/menu_items.txt</text>
+    <text x="25" y="198" fill="#4ade80" font-weight="bold">Successfully loaded 5 customers from Data/customers.txt</text>
+    <text x="25" y="216" fill="#4ade80" font-weight="bold">Successfully loaded 6 orders from Data/orders.txt</text>
+    <text x="25" y="234" fill="#4ade80" font-weight="bold">Successfully loaded 5 bills from Data/bills.txt</text>
+    <text x="25" y="252" fill="#e2e8f0" font-weight="normal"></text>
+    <text x="25" y="270" fill="#e2e8f0" font-weight="normal">Data loaded: 11 menu items, 5 customers, 6 orders, 5 bills.</text>
+    <text x="25" y="288" fill="#e2e8f0" font-weight="normal"></text>
+    <text x="25" y="306" fill="#60a5fa" font-weight="bold">========================================</text>
+    <text x="25" y="324" fill="#60a5fa" font-weight="bold">  RESTAURANT ORDER &amp; BILLING SYSTEM</text>
+    <text x="25" y="342" fill="#e2e8f0" font-weight="normal">  Enrollment: IU2541230417 | CPP07</text>
+    <text x="25" y="360" fill="#60a5fa" font-weight="bold">========================================</text>
+    <text x="25" y="378" fill="#93c5fd" font-weight="normal">1. Add Record</text>
+    <text x="25" y="396" fill="#93c5fd" font-weight="normal">2. Display Records</text>
+    <text x="25" y="414" fill="#93c5fd" font-weight="normal">3. Search Record</text>
+    <text x="25" y="432" fill="#e2e8f0" font-weight="normal">4. Update Record</text>
+    <text x="25" y="450" fill="#e2e8f0" font-weight="normal">5. Delete Record</text>
+    <text x="25" y="468" fill="#e2e8f0" font-weight="normal">6. Place Order (Main Transaction)</text>
+    <text x="25" y="486" fill="#e2e8f0" font-weight="normal">7. Generate Report</text>
+    <text x="25" y="504" fill="#e2e8f0" font-weight="normal">8. Save/Load Data</text>
+    <text x="25" y="522" fill="#e2e8f0" font-weight="normal">9. Exit</text>
+    <text x="25" y="540" fill="#60a5fa" font-weight="bold">========================================</text>
+    <text x="25" y="558" fill="#93c5fd" font-weight="normal">Enter choice: </text>
+    <text x="25" y="576" fill="#60a5fa" font-weight="bold">========================================</text>
+    <text x="25" y="594" fill="#60a5fa" font-weight="bold">          RESTAURANT REPORT             </text>
+    <text x="25" y="612" fill="#60a5fa" font-weight="bold">========================================</text>
+    <text x="25" y="630" fill="#e2e8f0" font-weight="normal">Total Menu Items : 11</text>
+    <text x="25" y="648" fill="#e2e8f0" font-weight="normal">Total Customers  : 5</text>
+    <text x="25" y="666" fill="#e2e8f0" font-weight="normal">Total Orders     : 6</text>
+    <text x="25" y="684" fill="#e2e8f0" font-weight="normal">Total Bills      : 5</text>
+    <text x="25" y="702" fill="#e2e8f0" font-weight="normal"></text>
+    <text x="25" y="720" fill="#e2e8f0" font-weight="normal">--- Order Summary ---</text>
+    <text x="25" y="738" fill="#e2e8f0" font-weight="normal">Pending Orders   : 1</text>
+    <text x="25" y="756" fill="#e2e8f0" font-weight="normal">Completed Orders : 5</text>
+    <text x="25" y="774" fill="#e2e8f0" font-weight="normal">Cancelled Orders : 0</text>
+    <text x="25" y="792" fill="#e2e8f0" font-weight="normal"></text>
+    <text x="25" y="810" fill="#e2e8f0" font-weight="normal">--- Revenue Summary ---</text>
+    <text x="25" y="828" fill="#facc15" font-weight="bold">Total Revenue        : Rs. 3617.80</text>
+  </g>
+</svg>
